@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Notifikasi</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <style>
+        body {
+            background-color: #f4f7f6;
+            background-image: 
+                linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+                url('https://uploads.onecompiler.io/43ucqyuas/43uezvmhj/44a7db3ea5b4d644696c6493f0b2a4fa.jpg'); 
+            background-size: cover;
+            background-attachment: fixed; 
+            background-position: center;
+            padding-bottom: 70px;
+        }
+        .container {
+            margin-top: 2rem;
+            margin-bottom: 2rem;
+            padding: 20px;
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+        }
+        .notification-item {
+            border-bottom: 1px solid #e0e0e0;
+            padding: 1rem 1.5rem;
+            transition: background-color 0.3s;
+        }
+        .notification-item:hover {
+            background-color: #f0f0f0;
+        }
+        .notification-item:last-child {
+            border-bottom: none;
+        }
+        .unread {
+            background-color: #e9f5ff; 
+            border-left: 5px solid #007bff;
+        }
+        .unread:hover {
+             background-color: #dbeaff;
+        }
+        .navbar-brand i {
+            margin-right: 5px;
+        }
+    </style>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#"><i class="bi bi-hammer"></i> Lelang Online</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" 
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link" href="home.html"><i class="bi bi-grid-fill"></i> Lelang</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="history.html"><i class="bi bi-clock-history"></i> Riwayat Lelang</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="notif.html"><i class="bi bi-bell-fill"></i> Notifikasi
+                        <span class="badge bg-danger ms-1">3</span>
+                    </a>
+                </li>
+            </ul>
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html" onclick="logout()"><i class="bi bi-box-arrow-right"></i> Logout</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<div class="container mt-4">
+    <div class="d-flex justify-content-between align-items-center mb-4">
+        <h1 class="text-info"><i class="bi bi-bell-ring-fill"></i> Notifikasi Anda</h1>
+        <button class="btn btn-outline-secondary btn-sm" onclick="markAllNotificationsAsRead()">
+            <i class="bi bi-check-all"></i> Tandai Semua Sudah Dibaca
+        </button>
+    </div>
+
+    <div class="list-group">
+        <div class="list-group-item list-group-item-action notification-item unread">
+            <div class="d-flex w-100 justify-content-between">
+                <h5 class="mb-1 text-success"><i class="bi bi-trophy-fill"></i> Selamat! Anda memenangkan lelang.</h5>
+                <small class="text-muted">baru saja</small>
+            </div>
+            <p class="mb-1">Anda adalah pemenang lelang untuk **CANON EOS 3000D With Lens 18-55mm DC III** dengan harga akhir **Rp 8.499.000**.</p>
+        </div>
+
+        <div class="list-group-item list-group-item-action notification-item unread">
+            <div class="d-flex w-100 justify-content-between">
+                <h5 class="mb-1 text-danger"><i class="bi bi-arrow-down-circle-fill"></i> Tawaran Anda dikalahkan.</h5>
+                <small class="text-muted">12 menit yang lalu</small>
+            </div>
+            <p class="mb-1">Tawaran Anda untuk **ODOSPEED ANACHRONO** telah dikalahkan. Tawaran tertinggi 
+                saat ini adalah **Rp 3.500.000**.</p>
+        </div>
+
+        <div class="list-group-item list-group-item-action notification-item">
+            <div class="d-flex w-100 justify-content-between">
+                <h5 class="mb-1 text-secondary"><i class="bi bi-info-circle-fill"></i> Lelang berakhir.</h5>
+                <small class="text-muted">12 menit yang lalu</small>
+            </div>
+            <p class="mb-1">Lelang untuk **ODOSPEED ANACHRONO** telah berakhir. Pemenang adalah **User B** dengan harga **Rp 3.500.000**.
+            </p>
+        </div>
+    </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>

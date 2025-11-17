@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Daftar Akun Baru - Lelang Online</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <style>
+        body {
+            background: linear-gradient(135deg, #007bff 0%, #0056b3 100%); 
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .register-container {
+            max-width: 450px;
+            padding: 40px;
+            background: #fff;
+            border-radius: 12px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+            animation: fadeIn 1s ease-out;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .text-center h2 {
+            color: #007bff;
+            font-weight: 600;
+        }
+        .btn-primary {
+            background-color: #007bff;
+            border-color: #007bff;
+            transition: background-color 0.3s;
+        }
+        .btn-primary:hover {
+            background-color: #0056b3;
+            border-color: #0056b3;
+        }
+        @media (max-width: 576px) {
+            .register-container {
+                margin-top: 50px;
+                max-width: 90%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-12 col-sm-10 col-md-8 register-container"> 
+            <h2 class="text-center mb-4"><i class="bi bi-person-add text-primary"></i> Daftar Akun</h2>
+            
+            <div id="alertMessage" class="alert alert-success d-none" role="alert">
+                Pendaftaran berhasil! Silakan <a href="login.html" class="alert-link">Login</a> untuk mulai menawar.
+            </div>
+
+            <form id="registrationForm">
+                <div class="mb-3">
+                    <label for="nameInput" class="form-label"><i class="bi bi-person-vcard-fill"></i> Nama Lengkap</label>
+                    <input type="text" class="form-control" id="nameInput" required>
+                </div>
+                <div class="mb-3">
+                    <label for="emailInput" class="form-label"><i class="bi bi-envelope-fill"></i> Email</label>
+                    <input type="email" class="form-control" id="emailInput" required>
+                </div>
+                <div class="mb-3">
+                    <label for="passwordInput" class="form-label"><i class="bi bi-lock-fill"></i> Password</label>
+                    <input type="password" class="form-control" id="passwordInput" required>
+                </div>
+                <div class="mb-3">
+                    <label for="confirmPasswordInput" class="form-label"><i class="bi bi-lock-fill"></i> Konfirmasi Password</label>
+                    <input type="password" class="form-control" id="confirmPasswordInput" required>
+                </div>
+                <div class="d-grid gap-2 mt-4">
+                    <button type="submit" class="btn btn-primary btn-lg">Daftar</button>
+                </div>
+                <div class="text-center mt-3">
+                    Sudah punya akun? <a href="login.html">Login di sini</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
